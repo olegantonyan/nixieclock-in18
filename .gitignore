@@ -1,0 +1,6 @@
+firmware/build/
+firmware/.dep
+node_modules/
+.cache/
+firmware/webapp/build/
+hardware/nixieclock-in18/fp-info-cache
