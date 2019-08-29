@@ -1,0 +1,339 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Amplifier_Operational:TL071 U?
+U 1 1 5D67612D
+P 4350 2750
+F 0 "U?" H 4694 2796 50  0000 L CNN
+F 1 "TL071" H 4694 2705 50  0000 L CNN
+F 2 "" H 4400 2800 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 4500 2900 50  0001 C CNN
+	1    4350 2750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_BJT:BC848 Q?
+U 1 1 5D676F4C
+P 5550 2500
+F 0 "Q?" H 5741 2546 50  0000 L CNN
+F 1 "BC848" H 5741 2455 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 5750 2425 50  0001 L CIN
+F 3 "http://www.infineon.com/dgdl/Infineon-BC847SERIES_BC848SERIES_BC849SERIES_BC850SERIES-DS-v01_01-en.pdf?fileId=db3a304314dca389011541d4630a1657" H 5550 2500 50  0001 L CNN
+	1    5550 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5D679E67
+P 5000 2450
+F 0 "R?" H 5070 2496 50  0000 L CNN
+F 1 "3k3" H 5070 2405 50  0000 L CNN
+F 2 "" V 4930 2450 50  0001 C CNN
+F 3 "~" H 5000 2450 50  0001 C CNN
+	1    5000 2450
+	1    0    0    -1  
+$EndComp
+NoConn ~ 4450 3050
+NoConn ~ 4350 3050
+$Comp
+L Transistor_BJT:BC858 Q?
+U 1 1 5D6792CA
+P 5550 3000
+F 0 "Q?" H 5741 2954 50  0000 L CNN
+F 1 "BC858" H 5741 3045 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 5750 2925 50  0001 L CIN
+F 3 "http://www.fairchildsemi.com/ds/BC/BC856.pdf" H 5550 3000 50  0001 L CNN
+	1    5550 3000
+	1    0    0    1   
+$EndComp
+$Comp
+L power:+15V #PWR?
+U 1 1 5D67CA5D
+P 4250 2100
+F 0 "#PWR?" H 4250 1950 50  0001 C CNN
+F 1 "+15V" H 4265 2273 50  0000 C CNN
+F 2 "" H 4250 2100 50  0001 C CNN
+F 3 "" H 4250 2100 50  0001 C CNN
+	1    4250 2100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5D67CFCB
+P 4250 3350
+F 0 "#PWR?" H 4250 3100 50  0001 C CNN
+F 1 "GND" H 4255 3177 50  0000 C CNN
+F 2 "" H 4250 3350 50  0001 C CNN
+F 3 "" H 4250 3350 50  0001 C CNN
+	1    4250 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5D67DA98
+P 3800 2450
+F 0 "R?" H 3870 2496 50  0000 L CNN
+F 1 "10k" H 3870 2405 50  0000 L CNN
+F 2 "" V 3730 2450 50  0001 C CNN
+F 3 "~" H 3800 2450 50  0001 C CNN
+	1    3800 2450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5D67E5FB
+P 3800 3050
+F 0 "R?" H 3870 3096 50  0000 L CNN
+F 1 "1k" H 3870 3005 50  0000 L CNN
+F 2 "" V 3730 3050 50  0001 C CNN
+F 3 "~" H 3800 3050 50  0001 C CNN
+	1    3800 3050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5D67F57C
+P 3550 2850
+F 0 "R?" H 3620 2896 50  0000 L CNN
+F 1 "10k" H 3620 2805 50  0000 L CNN
+F 2 "" V 3480 2850 50  0001 C CNN
+F 3 "~" H 3550 2850 50  0001 C CNN
+	1    3550 2850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4250 2100 4250 2250
+Wire Wire Line
+	4250 3350 4250 3250
+Wire Wire Line
+	4650 2750 5000 2750
+Wire Wire Line
+	5300 2750 5300 2500
+Wire Wire Line
+	5300 2500 5350 2500
+Wire Wire Line
+	5300 2750 5300 3000
+Wire Wire Line
+	5300 3000 5350 3000
+Connection ~ 5300 2750
+Wire Wire Line
+	5650 2700 5650 2750
+Wire Wire Line
+	5650 2300 5650 2250
+Wire Wire Line
+	5650 2250 5000 2250
+Connection ~ 4250 2250
+Wire Wire Line
+	4250 2250 4250 2450
+Wire Wire Line
+	5000 2300 5000 2250
+Connection ~ 5000 2250
+Wire Wire Line
+	5000 2250 4250 2250
+Wire Wire Line
+	5650 3200 5650 3250
+Wire Wire Line
+	5650 3250 4250 3250
+Connection ~ 4250 3250
+Wire Wire Line
+	4250 3250 4250 3050
+Wire Wire Line
+	5000 2600 5000 2750
+Connection ~ 5000 2750
+Wire Wire Line
+	5000 2750 5300 2750
+Wire Wire Line
+	4250 2250 3800 2250
+Wire Wire Line
+	3800 2250 3800 2300
+Wire Wire Line
+	4050 2650 3550 2650
+Wire Wire Line
+	3550 2650 3550 2700
+Wire Wire Line
+	3800 2600 3800 2850
+Wire Wire Line
+	4050 2850 3800 2850
+Connection ~ 3800 2850
+Wire Wire Line
+	3800 2850 3800 2900
+Wire Wire Line
+	4250 3250 3800 3250
+Wire Wire Line
+	3550 3250 3550 3000
+Wire Wire Line
+	3800 3200 3800 3250
+Connection ~ 3800 3250
+Wire Wire Line
+	3800 3250 3550 3250
+$Comp
+L Device:C C?
+U 1 1 5D68323F
+P 3250 2850
+F 0 "C?" H 3365 2896 50  0000 L CNN
+F 1 "0.1" H 3365 2805 50  0000 L CNN
+F 2 "" H 3288 2700 50  0001 C CNN
+F 3 "~" H 3250 2850 50  0001 C CNN
+	1    3250 2850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3800 2250 3250 2250
+Wire Wire Line
+	3250 2250 3250 2700
+Connection ~ 3800 2250
+Wire Wire Line
+	3250 3000 3250 3250
+Wire Wire Line
+	3250 3250 3550 3250
+Connection ~ 3550 3250
+$Comp
+L Transistor_FET:Si7336ADP Q?
+U 1 1 5D68A9E8
+P 6250 2750
+F 0 "Q?" H 6456 2796 50  0000 L CNN
+F 1 "Si4434" H 6456 2705 50  0000 L CNN
+F 2 "Package_SO:PowerPAK_SO-8_Single" H 6450 2675 50  0001 L CIN
+F 3 "https://www.vishay.com/docs/73152/si7336adp.pdf" H 6250 2750 50  0001 L CNN
+	1    6250 2750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5650 3250 6350 3250
+Wire Wire Line
+	6350 3250 6350 2950
+Connection ~ 5650 3250
+Wire Wire Line
+	5650 2750 6050 2750
+Connection ~ 5650 2750
+Wire Wire Line
+	5650 2750 5650 2800
+$Comp
+L Device:L_Core_Ferrite L?
+U 1 1 5D68D9E7
+P 6050 2250
+F 0 "L?" V 6275 2250 50  0000 C CNN
+F 1 "1.5mH" V 6184 2250 50  0000 C CNN
+F 2 "" H 6050 2250 50  0001 C CNN
+F 3 "~" H 6050 2250 50  0001 C CNN
+	1    6050 2250
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:D_Schottky D?
+U 1 1 5D690889
+P 6600 2250
+F 0 "D?" H 6600 2034 50  0000 C CNN
+F 1 "FR203" H 6600 2125 50  0000 C CNN
+F 2 "" H 6600 2250 50  0001 C CNN
+F 3 "~" H 6600 2250 50  0001 C CNN
+	1    6600 2250
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:CP C?
+U 1 1 5D691C3A
+P 6850 2750
+F 0 "C?" H 6968 2796 50  0000 L CNN
+F 1 "2.2uF" H 6968 2705 50  0000 L CNN
+F 2 "" H 6888 2600 50  0001 C CNN
+F 3 "~" H 6850 2750 50  0001 C CNN
+	1    6850 2750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5650 2250 5900 2250
+Connection ~ 5650 2250
+Wire Wire Line
+	6200 2250 6350 2250
+Wire Wire Line
+	6750 2250 6850 2250
+Wire Wire Line
+	6850 2250 6850 2600
+Wire Wire Line
+	6350 3250 6850 3250
+Wire Wire Line
+	6850 3250 6850 2900
+Connection ~ 6350 3250
+Wire Wire Line
+	6350 2550 6350 2250
+Connection ~ 6350 2250
+Wire Wire Line
+	6350 2250 6450 2250
+$Comp
+L Device:R_POT_TRIM RV?
+U 1 1 5D695D5A
+P 7450 2750
+F 0 "RV?" H 7380 2796 50  0000 R CNN
+F 1 "1k" H 7380 2705 50  0000 R CNN
+F 2 "" H 7450 2750 50  0001 C CNN
+F 3 "~" H 7450 2750 50  0001 C CNN
+	1    7450 2750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5D697BD8
+P 7450 2400
+F 0 "R?" H 7520 2446 50  0000 L CNN
+F 1 "330k" H 7520 2355 50  0000 L CNN
+F 2 "" V 7380 2400 50  0001 C CNN
+F 3 "~" H 7450 2400 50  0001 C CNN
+	1    7450 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5D698085
+P 7450 3100
+F 0 "R?" H 7520 3146 50  0000 L CNN
+F 1 "1k" H 7520 3055 50  0000 L CNN
+F 2 "" V 7380 3100 50  0001 C CNN
+F 3 "~" H 7450 3100 50  0001 C CNN
+	1    7450 3100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7450 2250 6850 2250
+Connection ~ 6850 2250
+Wire Wire Line
+	7450 3250 6850 3250
+Connection ~ 6850 3250
+Wire Wire Line
+	7450 2550 7450 2600
+Wire Wire Line
+	7450 2900 7450 2950
+$Comp
+L power:PWR_FLAG #FLG?
+U 1 1 5D6A69E4
+P 6850 2000
+F 0 "#FLG?" H 6850 2075 50  0001 C CNN
+F 1 "PWR_FLAG" H 6850 2173 50  0000 C CNN
+F 2 "" H 6850 2000 50  0001 C CNN
+F 3 "~" H 6850 2000 50  0001 C CNN
+	1    6850 2000
+	1    0    0    -1  
+$EndComp
+Text GLabel 6900 2150 2    50   Input ~ 0
+170V
+Wire Wire Line
+	6850 2000 6850 2150
+Wire Wire Line
+	6900 2150 6850 2150
+Connection ~ 6850 2150
+Wire Wire Line
+	6850 2150 6850 2250
+$EndSCHEMATC
