@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name russian-nixies)(type Legacy)(uri /home/oleg/Desktop/kicad-master/libraries/russian-nixies.lib)(options "")(descr ""))
+  (lib (name in18)(type Legacy)(uri ${KIPRJMOD}/in18.lib)(options "")(descr ""))
+)

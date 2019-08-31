@@ -36,7 +36,7 @@ bool pwm_init() {
 
   adc_init();
 
-  return xTaskCreate(thread, TAG, 4096, NULL, 15, NULL) == pdPASS;
+  return xTaskCreate(thread, TAG, 4096, NULL, 5, NULL) == pdPASS;
 }
 
 static void set_duty(uint32_t duty) {
@@ -45,9 +45,9 @@ static void set_duty(uint32_t duty) {
 }
 
 static void thread(void *params) {
-  const uint32_t MAX_DUTY = 1500; // overvoltage protection
+  const uint32_t MAX_DUTY = 1200; // overvoltage protection
   const uint32_t MARGIN = 8;
-  const uint32_t THRESHOLD = 800;
+  const uint32_t THRESHOLD = 1200;
 
   uint32_t duty = 0;
   while(true) {
@@ -63,6 +63,7 @@ static void thread(void *params) {
   		set_duty(++duty);
   	}
 
-    taskYIELD();
+    //taskYIELD();
+    vTaskDelay(1);
   }
 }
