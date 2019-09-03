@@ -1,0 +1,13 @@
+ls
+cd ~/projects/nixieclock-in18/
+cd --help
+cd
+cd help
+cd projects/nixieclock-in18/
+ls
+echo 
+echo ''
+echo 'dfsdf'
+echo $PATH
+echo $HOME
+~

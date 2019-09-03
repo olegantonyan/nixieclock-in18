@@ -327,17 +327,6 @@ Wire Wire Line
 Wire Wire Line
 	3500 6850 4200 6850
 $Comp
-L RF_Module:ESP32-WROOM-32D U4
-U 1 1 5D6FCD20
-P 3800 2550
-F 0 "U4" H 3350 4100 50  0000 C CNN
-F 1 "ESP32-WROOM-32D" H 3350 4000 50  0000 C CNN
-F 2 "ESP32-footprints-Lib:ESP32-WROOM" H 3800 1050 50  0001 C CNN
-F 3 "https://www.espressif.com/sites/default/files/documentation/esp32-wroom-32d_esp32-wroom-32u_datasheet_en.pdf" H 3500 2600 50  0001 C CNN
-	1    3800 2550
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:GND #PWR0103
 U 1 1 5D702D04
 P 3800 4050
@@ -445,7 +434,7 @@ U 1 1 5D68A9E8
 P 4100 6300
 F 0 "Q3" H 4306 6346 50  0000 L CNN
 F 1 "Si4434" H 4306 6255 50  0000 L CNN
-F 2 "Housings_SOIC:SOIC-8_3.9x4.9mm_Pitch1.27mm" H 4300 6225 50  0001 L CIN
+F 2 "Housings_SOIC:PowerPAK_SO-8_Single" H 4300 6225 50  0001 L CIN
 F 3 "https://www.vishay.com/docs/73152/si7336adp.pdf" H 4100 6300 50  0001 L CNN
 	1    4100 6300
 	1    0    0    -1  
@@ -760,7 +749,7 @@ U 1 1 5D684C4E
 P 2500 4000
 F 0 "J1" H 2580 3992 50  0000 L CNN
 F 1 "PROG" H 2580 3901 50  0000 L CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x07_Pitch2.54mm" H 2500 4000 50  0001 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x06_Pitch2.54mm" H 2500 4000 50  0001 C CNN
 F 3 "~" H 2500 4000 50  0001 C CNN
 	1    2500 4000
 	1    0    0    -1  
@@ -1912,12 +1901,12 @@ Wire Wire Line
 $Comp
 L power:+15V #PWR0127
 U 1 1 5D6C49C6
-P 2150 4700
-F 0 "#PWR0127" H 2150 4550 50  0001 C CNN
-F 1 "+15V" H 2165 4873 50  0000 C CNN
-F 2 "" H 2150 4700 50  0001 C CNN
-F 3 "" H 2150 4700 50  0001 C CNN
-	1    2150 4700
+P 1750 4700
+F 0 "#PWR0127" H 1750 4550 50  0001 C CNN
+F 1 "+15V" H 1765 4873 50  0000 C CNN
+F 2 "" H 1750 4700 50  0001 C CNN
+F 3 "" H 1750 4700 50  0001 C CNN
+	1    1750 4700
 	0    -1   -1   0   
 $EndComp
 Wire Wire Line
@@ -2040,22 +2029,6 @@ F 3 "http://www.infineon.com/dgdl/Infineon-BC847SERIES_BC848SERIES_BC849SERIES_B
 	1    6450 1750
 	-1   0    0    1   
 $EndComp
-Wire Bus Line
-	5750 2100 6950 2100
-Wire Bus Line
-	6950 2100 8150 2100
-Wire Bus Line
-	8150 2100 9350 2100
-Wire Bus Line
-	9350 2100 10450 2100
-Wire Bus Line
-	9350 2100 9350 3450
-Wire Bus Line
-	8150 2100 8150 3450
-Wire Bus Line
-	6950 2100 6950 3450
-Wire Bus Line
-	5750 2100 5750 3450
 $Comp
 L Transistor_BJT:BC848 Q8
 U 1 1 5D7810C1
@@ -2144,4 +2117,112 @@ F 3 "http://www.infineon.com/dgdl/Infineon-BC847SERIES_BC848SERIES_BC849SERIES_B
 	1    10450 1750
 	-1   0    0    1   
 $EndComp
+Text GLabel 4500 2950 2    50   Input ~ 0
+LED_SYNC
+Wire Wire Line
+	4400 2950 4500 2950
+Text GLabel 4500 2850 2    50   Input ~ 0
+~AN2
+Wire Wire Line
+	4500 2850 4400 2850
+$Comp
+L RF_Module:ESP32-WROOM-32D U4
+U 1 1 5D6FCD20
+P 3800 2550
+F 0 "U4" H 3350 4100 50  0000 C CNN
+F 1 "ESP32-WROOM-32D" H 3350 4000 50  0000 C CNN
+F 2 "ESP32-footprints-Lib:ESP32-WROOM" H 3800 1050 50  0001 C CNN
+F 3 "https://www.espressif.com/sites/default/files/documentation/esp32-wroom-32d_esp32-wroom-32u_datasheet_en.pdf" H 3500 2600 50  0001 C CNN
+	1    3800 2550
+	1    0    0    -1  
+$EndComp
+Text GLabel 4500 2750 2    50   Input ~ 0
+~AN3
+Wire Wire Line
+	4500 2750 4400 2750
+Text GLabel 4500 3650 2    50   Input ~ 0
+~AN1
+Wire Wire Line
+	4500 3650 4400 3650
+Text GLabel 4500 3350 2    50   Input ~ 0
+~AN0
+Wire Wire Line
+	4500 3350 4400 3350
+Text GLabel 4500 2650 2    50   Input ~ 0
+DIG9
+Wire Wire Line
+	4500 2650 4400 2650
+Text GLabel 4500 1750 2    50   Input ~ 0
+DIG1
+Wire Wire Line
+	4500 1750 4400 1750
+Text GLabel 4500 2450 2    50   Input ~ 0
+DIG7
+Wire Wire Line
+	4500 2450 4400 2450
+Text GLabel 4500 2350 2    50   Input ~ 0
+DIG4
+Wire Wire Line
+	4400 2350 4500 2350
+Text GLabel 4500 2250 2    50   Input ~ 0
+DIG2
+Wire Wire Line
+	4500 2250 4400 2250
+Text GLabel 3100 2650 0    50   Input ~ 0
+DIG8
+Wire Wire Line
+	3200 2650 3100 2650
+Text GLabel 3100 2550 0    50   Input ~ 0
+DIG0
+Wire Wire Line
+	3200 2550 3100 2550
+Text GLabel 3100 2750 0    50   Input ~ 0
+DIG5
+Wire Wire Line
+	3100 2750 3200 2750
+Text GLabel 3100 2850 0    50   Input ~ 0
+DIG6
+Wire Wire Line
+	3100 2850 3200 2850
+Text GLabel 3100 3050 0    50   Input ~ 0
+DIG3
+Wire Wire Line
+	3100 3050 3200 3050
+NoConn ~ 3200 2950
+NoConn ~ 4400 1550
+NoConn ~ 4400 1850
+NoConn ~ 4400 1950
+NoConn ~ 4400 2050
+NoConn ~ 4400 2150
+NoConn ~ 4400 3050
+NoConn ~ 4400 3450
+$Comp
+L Device:Fuse F?
+U 1 1 5D6F9D25
+P 2000 4700
+F 0 "F?" V 1803 4700 50  0000 C CNN
+F 1 "100mA" V 1894 4700 50  0000 C CNN
+F 2 "" V 1930 4700 50  0001 C CNN
+F 3 "~" H 2000 4700 50  0001 C CNN
+	1    2000 4700
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1850 4700 1750 4700
+Wire Bus Line
+	5750 2100 6950 2100
+Wire Bus Line
+	6950 2100 8150 2100
+Wire Bus Line
+	8150 2100 9350 2100
+Wire Bus Line
+	9350 2100 10450 2100
+Wire Bus Line
+	9350 2100 9350 3450
+Wire Bus Line
+	8150 2100 8150 3450
+Wire Bus Line
+	6950 2100 6950 3450
+Wire Bus Line
+	5750 2100 5750 3450
 $EndSCHEMATC
