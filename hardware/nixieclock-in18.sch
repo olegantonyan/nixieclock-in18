@@ -2176,10 +2176,8 @@ Text GLabel 3100 2550 0    50   Input ~ 0
 DIG0
 Wire Wire Line
 	3200 2550 3100 2550
-Text GLabel 3100 2750 0    50   Input ~ 0
+Text GLabel 4500 1950 2    50   Input ~ 0
 DIG5
-Wire Wire Line
-	3100 2750 3200 2750
 Text GLabel 3100 2850 0    50   Input ~ 0
 DIG6
 Wire Wire Line
@@ -2191,9 +2189,7 @@ Wire Wire Line
 NoConn ~ 3200 2950
 NoConn ~ 4400 1550
 NoConn ~ 4400 1850
-NoConn ~ 4400 1950
 NoConn ~ 4400 2050
-NoConn ~ 4400 2150
 NoConn ~ 4400 3050
 NoConn ~ 4400 3450
 $Comp
@@ -2209,6 +2205,12 @@ F 3 "~" H 2000 4700 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	1850 4700 1750 4700
+Entry Wire Line
+	3400 4200 3500 4300
+Wire Wire Line
+	4400 1950 4500 1950
+NoConn ~ 3200 2750
+NoConn ~ 4400 2150
 Wire Bus Line
 	5750 2100 6950 2100
 Wire Bus Line
